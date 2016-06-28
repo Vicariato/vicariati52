@@ -37,16 +37,6 @@
         </div>
     </div>
 
-    <!--
-    <div class="form-group">
-        <?php echo Form::label('title', 'Codice CAPTCHA:', ['class'=>'col-sm-2 control-label']); ?>
-
-        <div class="col-md-10">
-             <?php echo app('captcha')->display();; ?> 
-        </div>
-    </div>
-    -->
-
     <br />
     <?php echo Form::submit(); ?>
 

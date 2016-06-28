@@ -33,15 +33,6 @@
         </div>
     </div>
 
-    <!--
-    <div class="form-group">
-        {!! Form::label('title', 'Codice CAPTCHA:', ['class'=>'col-sm-2 control-label']) !!}
-        <div class="col-md-10">
-             {!! app('captcha')->display(); !!} 
-        </div>
-    </div>
-    -->
-
     <br />
     {!! Form::submit() !!}
     {!! Form::close() !!}

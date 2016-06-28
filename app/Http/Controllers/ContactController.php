@@ -57,14 +57,11 @@ class ContactController extends Controller {
         $data = Input::all();
         $rules = array(
             'subject' => 'required',
-            'message' => 'required',
-            'captcha' => array('required', 'captcha')
+            'message' => 'required'
         );
         $messages = array(
             'subject.required' => 'E-Mail richiesta',
-            'message.required' => 'Messaggio richiesta',
-            'captcha.required' => 'Codice capcha richiesto',
-            'captcha.captcha' => 'Codice capcha non corretto');
+            'message.required' => 'Messaggio richiesta');
 
         $validator = Validator::make($data, $rules, $messages);
 
@@ -103,14 +100,11 @@ class ContactController extends Controller {
         $data = Input::all();
         $rules = array(
             'subject' => 'required',
-            'message' => 'required',
-            'captcha' => array('required', 'captcha')
+            'message' => 'required'
         );
         $messages = array(
             'subject.required' => 'E-Mail richiesta',
-            'message.required' => 'Messaggio richiesta',
-            'captcha.required' => 'Codice capcha richiesto',
-            'captcha.captcha' => 'Codice capcha non corretto');
+            'message.required' => 'Messaggio richiesta');
 
         $validator = Validator::make($data, $rules, $messages);
 
@@ -152,7 +146,6 @@ class ContactController extends Controller {
         $rules = array(
             'subject' => 'required',
             'message' => 'required'
-            //,'g-recaptcha-response' => 'required|captcha'
         );
 
         $validator = Validator::make($data, $rules);
