@@ -11,11 +11,12 @@ use Validator;
 use Redirect;
 use App\Models\Ambiti;
 
-//phil1
+//phil12
 
-class AmbitiController extends Controller {
+class AmbitiController extends HomeController {
 
     public function mostraAmbito($id) {
+
 
         $newsPrimoPiano = DB::table('news')
                 ->select(
@@ -39,7 +40,7 @@ class AmbitiController extends Controller {
                 ->get();
         
         $visualizzaContenitore = Session::get('visualizzaContenitore');
-        $newss = DB::table('news')
+        $news = DB::table('news')
                 ->select(
                         'news.id as id_task', //
                         'news.title', //
@@ -125,7 +126,7 @@ class AmbitiController extends Controller {
             $ambito->utenteAppartenenteAmbito = false;
         }
 
-        return View::make('ambiti.ambito', compact('newss', 'ambito', 'rigaResponsabili', 'contenitori', 'newsPrimoPiano'));
+        return View::make('ambiti.ambito', compact('news', 'ambito', 'rigaResponsabili', 'contenitori', 'newsPrimoPiano'));
     }
 
     public function visualizzaContenitoreAmbito($id) {
